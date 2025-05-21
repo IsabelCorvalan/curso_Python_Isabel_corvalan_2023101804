@@ -15,16 +15,16 @@ def resto(a,b):
 
 n1=2
 n2=5
-resul=sumar(n1,n2)
-print(f"La suma es: ",resul)
+resultado=sumar(n1,n2)
+print(f"La suma es: ",resultado)
 reusl=resta(n1,n2)
-print(f"La resta es: ",resul)
+print(f"La resta es: ",resultado)
 resul=multipli(n1,n2)
-print(f"La multplicacion es: ",resul)
+print(f"La multplicacion es: ",resultado)
 resul=divi(n1,n2)
-print(f"La division es: ",resul)
+print(f"La division es: ",resultado)
 resul=resto(n1,n2)
-print(f"La resto es: ", resul)
+print(f"La resto es: ", resultado)
     
 
 
