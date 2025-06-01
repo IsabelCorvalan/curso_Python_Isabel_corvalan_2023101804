@@ -1,14 +1,13 @@
-from flask import Flask, request, jsonify
-from cliente import verificar_cliente
+from flask import Flask
+from cliente import cliente
 
-app = Flask(__name__)
+app = Flask( __name__)
 
-@app.route('/cliente', methods=['POST'])
-def cliente():
-    data = request.get_json()
-    ci = data.get('ci')
-    resultado = verificar_cliente(ci)
-    return jsonify(resultado)
+app.register_blueprint(cliente)
 
-if __name__ == '__main__':
-    app.run(port=5003)
+@app.route('/', methods=['GET'])
+def hello():
+    return 'Hola Unida soy Isabel Corvalan'
+
+if __name__ == "_main_":
+    app.run(host='0.0.0.0', port=5001, debug=True)
